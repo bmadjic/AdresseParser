@@ -38,6 +38,9 @@ class AdresseParser():
                 numero_dpt = "2A"
             else:
                 numero_dpt = "2B"
+
+        if 97000 <= code_postal < 98000:
+            numero_dpt = code_postal//100
         
         dict_adresse = {
             "numero": self.get_numero_rue(bloc_rue),
